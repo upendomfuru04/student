@@ -8,6 +8,8 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato|Nanum+Gothic:700|Raleway&display=swap" rel="stylesheet">
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css" rel="stylesheet">
 </head>
 <style type="text/css">
 
@@ -98,6 +100,60 @@ header.secondary-nav .nav-link{
 	position: relative;
 	right: -3px;
 }
+
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  grid-gap: 23px;
+  align-items: stretch;
+}
+
+.grid > article {
+  border: 1px solid #ccc;
+  box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
+}
+
+.grid > article img {
+  max-width: 100%;
+  width: 100%;
+}
+
+.grid .text {
+  padding: 20px;
+}
+
+.grid .text h3{
+  font-size: 20px;
+  font-weight: bold;
+}
+
+
+
+.btn a:link, .btn a:visited {
+  background-color: white;
+  color: black;
+  border: 2px solid #fe6600;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+ .btn a:hover, .btn a:active {
+  background-color: #fe6600;
+  color: white;
+  font-size:13px;
+}
+
+ .btn a:hover i {
+  color: red;
+  font-weight: bolder;
+  font-size:15px;
+}
+.checked {
+  color: orange;
+}
  
 </style>
 <body>
@@ -108,8 +164,8 @@ header.secondary-nav .nav-link{
 <nav class="vam nav scroll dragger scroller">
     <li class="nav-item "><a href="dash.html" class="nav-link"><i class="fa fa-user"></i> Dashbord</a></li>
     <li class="nav-item"><a href="massange.html" class="nav-link"> <i class="fa fa-envelope"></i> My Massage</a></li>
-    <li class="nav-item active"><a href="index.html" class="nav-link"><i class='fa fa-user'></i>  Profile</a></li>
-    <li class="nav-item "><a href="tutor.html" class="nav-link"><i class='fa fa-heart'></i> Favorite tutor</a></li>
+    <li class="nav-item "><a href="index.html" class="nav-link"><i class='fa fa-user'></i>  Profile</a></li>
+    <li class="nav-item active"><a href="tutor.html" class="nav-link"><i class='fa fa-heart'></i> Favorite tutor</a></li>
     <li class="nav-item "><a href="webner.html" class="nav-link"><i class='fa fa-heart'></i> Favorite webinar</a></li>
     <li class="nav-item"><a href="course.html" class="nav-link"><i class='fa fa-heart'></i> Favorite course</a></li>
     <li class="nav-item"><a href="trans.html" class="nav-link"><i class="fa fa-credit-card"></i> My Transactions</a></li>
@@ -119,6 +175,163 @@ header.secondary-nav .nav-link{
 </nav>
 </div>
 </header>
+
+
+
+
+  <div class="container">
+  <main class="grid">
+    <article>
+      <img src="a.png" >
+      <div class="text">
+        <h3>Mohammad Alhawamdeh<i class="fa fa-check-circle" style="font-size:20px; color: blue;"></i> </h3>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span> 5(1)
+          <br>
+          <h5>Arabic , English  <span class="flag-icon flag-icon-ye flag-icon-squared"></span></h5>
+        <p>Discover how to achieve band 7+ in IELTS today!You..</p>
+        <div class="btn">
+        <a href="" class=" btn-sm">Book Free Trial</a>
+        <a href="" class=" btn-sm"><i class="far fa-heart"></i></a>
+      </div>
+  </div>
+    </article>
+    <article>
+      <img src="a.png">
+      <div class="text">
+        <h3>Bianca<i class="fa fa-check-circle" style="font-size:20px; color: blue;"></i> </h3>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span> 5(1)
+          <br>
+          <h5>Arabic , English  <span class="flag-icon flag-icon-ye flag-icon-squared"></span></h5>
+        <p>About MeI coach highly motivated adults who want..</p>
+        <div class="btn">
+        <a href="" class=" btn-sm">Book Free Trial</a>
+        <a href="" class=" btn-sm"><i class="far fa-heart"></i></a>
+      </div>
+      </div>
+    </article>
+    <article>
+      <img src="f.png">
+      <div class="text">
+        <h3>Shane Mullis<i class="fa fa-check-circle" style="font-size:20px; color: blue;"></i> </h3>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span> 5(1)
+          <br>
+          <h5>Arabic , English  <span class="flag-icon flag-icon-ye flag-icon-squared"></span></h5>
+        <p>NOTE: I am currently only able to open up my sched...</p>
+        <div class="btn">
+        <a href="" class=" btn-sm">Book Free Trial</a>
+        <a href="" class=" btn-sm"><i class="far fa-heart"></i></a>
+      </div>
+      </div>
+    </article>
+
+    <article>
+      <img src="b.png">
+      <div class="text">
+        <h3>Mercy Joyce<i class="fa fa-check-circle" style="font-size:20px; color: blue;"></i> </h3>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span> 5(1)
+          <br>
+          <h5>Arabic , English  <span class="flag-icon flag-icon-ye flag-icon-squared"></span></h5>
+        <p>Students' ReviewMuneer (Yemen)September 25, 2019 •</p>
+       <div class="btn">
+        <a href="" class=" btn-sm">Book Free Trial</a>
+        <a href="" class=" btn-sm"><i class="far fa-heart"></i></a>
+      </div>
+      </div>
+    </article>
+    <article>
+      <img src="c.png">
+      <div class="text">
+        <h3>Paul<i class="fa fa-check-circle" style="font-size:20px; color: blue;"></i> </h3>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span> 5(1)
+          <br>
+          <h5>Arabic , English  <span class="flag-icon flag-icon-ye flag-icon-squared"></span></h5>
+        <p>Discover how to achieve band 7+ in IELTS today!You..</p>
+        <div class="btn">
+        <a href="" class=" btn-sm">Book Free Trial</a>
+        <a href="" class=" btn-sm"><i class="far fa-heart"></i></a>
+      </div>
+      </div>
+    </article>
+    <article>
+      <img src="a.png">
+      <div class="text">
+        <h3>Sandra Towers<i class="fa fa-check-circle" style="font-size:20px; color: blue;"></i> </h3>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span> 5(1)
+          <br>
+          <h5>Arabic , English  <span class="flag-icon flag-icon-ye flag-icon-squared"></span></h5>
+        <p>Hey there!! My name is Sandra and I’m from the sta..</p>
+        <div class="btn">
+        <a href="" class=" btn-sm">Book Free Trial</a>
+        <a href="" class=" btn-sm"><i class="far fa-heart"></i></a>
+      </div>
+      </div>
+    </article>
+    <article>
+      <img src="f.png">
+      <div class="text">
+        <h3>Lara Parsons<i class="fa fa-check-circle" style="font-size:20px; color: blue;"></i> </h3>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span> 5(1)
+          <br>
+          <h5>Arabic , English  <span class="flag-icon flag-icon-ye flag-icon-squared"></span></h5>
+        <p>Hi Everyone! My name is Lara, I am 34 years old an..</p>
+        <div class="btn">
+        <a href="" class=" btn-sm">Book Free Trial</a>
+        <a href="" class=" btn-sm"><i class="far fa-heart"></i></a>
+      </div>
+      </div>
+    </article>
+    <article>
+        <article>
+      <img src="f.png">
+      <div class="text">
+        <h3>Best in class<i class="fa fa-check-circle" style="font-size:20px; color: blue;"></i> </h3>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span> 5(1)
+          <br>
+          <h5>Arabic , English  <span class="flag-icon flag-icon-ye flag-icon-squared"></span></h5>
+        <p>Imagine jumping into that boat, and just letting it sail wherever the wind takes you...</p>
+        <div class="btn">
+        <a href="" class=" btn-sm">Book Free Trial</a>
+        <a href="" class=" btn-sm"><i class="far fa-heart"></i></a>
+      </div>
+      </div>
+    </article>
+   
+  </main>
+  <br>
+</div>
+
 
 </body>
   <script type="text/javascript">

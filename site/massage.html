@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>global</title>
+ <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+</head>
+<style type="text/css">
+
+
+header.secondary-nav .scroll {
+  white-space: nowrap;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
+header.secondary-nav .scroll::-webkit-scrollbar {
+  display: none;
+}
+
+
+
+header.secondary-nav .dropdown {position:inherit;}
+header.secondary-nav .dropdown-item {display: inline-block; font-size:2rem; font-weight:500; width:auto; clear:inherit; padding: 12px;}
+header.secondary-nav .dropdown-toggle.visible {background:#fbf7fc}
+header.secondary-nav .dropdown-item.active, header.secondary-nav .dropdown-item:active, header.secondary-nav .dropdown-item:hover  {background:#fff;}
+
+header.secondary-nav, header.secondary-nav nav {
+  font-size: 0;
+}
+
+header.secondary-nav {
+  background-color: #fff;
+  // border-top: 1px solid #e2e2e3;
+  // border-bottom: 1px solid #e2e2e3;
+  position: relative;
+  z-index: 2;
+  clear: both;
+  width: 100%;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+  will-change: transform;
+  -webkit-transition: -webkit-transform .5s;
+  transition: -webkit-transform .5s;
+  transition: transform .5s;
+  transition: transform .5s, -webkit-transform .5s;
+}
+
+header.secondary-nav .vam {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+header.secondary-nav .nav {
+  width: 100%;
+}
+
+header.secondary-nav .nav-item {
+  display: inline-block;
+  vertical-align: middle;
+  // cursor: pointer;
+}
+
+header.secondary-nav .nav-link{
+  padding: 13px 14px;
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  header.secondary-nav::after {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 35px;
+    background: linear-gradient(to left, #e3e3e3, rgba(37, 40, 61, 0));
+    pointer-events: none;
+    transition: opacity .2s;
+  }
+  header.secondary-nav .nav-link {padding: 12px 10px;}
+}
+
+.active {
+    background:#dfe0e5;
+  overflow:hidden;
+  border-top:2px solid #00f;  
+}
+
+ i{
+	position: relative;
+	right: -3px;
+}
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+.container {
+  margin: 60px auto;
+  background: #fff;
+  padding: 0;
+  border-radius: 7px;
+}
+
+.profile-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 40px;
+}
+
+.settings-tray {
+  background: #eee;
+  padding: 10px 15px;
+  border-radius: 7px;
+  
+  .no-gutters {
+    padding: 0;
+  }
+  
+  &--right {
+    float: right;
+    
+    i {
+      margin-top: 10px;
+      font-size: 25px;
+      color: grey;
+      margin-left: 14px;
+      transition: .3s;
+      
+      &:hover {
+        color: $blue;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.search-box {
+  background: #fafafa;
+  padding: 10px 13px;
+  
+  .input-wrapper {
+    background: #fff;
+    border-radius: 40px;
+    
+    i {
+      color: grey;
+      margin-left: 7px; 
+      vertical-align: middle;
+    }
+  }
+}
+
+input {
+  border: none;
+  border-radius: 30px;
+  width: 80%;
+
+  &::placeholder {
+    color: #e3e3e3;
+    font-weight: 300;
+    margin-left: 20px;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.friend-drawer {
+  padding: 10px 15px;
+  display: flex;
+  vertical-align: baseline;
+  background: #fff;
+  transition: .3s ease;
+  
+  &--grey {
+    background: #eee;
+  }
+  
+  .text {
+    margin-left: 12px;
+    width: 70%;
+  }
+    h6 {
+      margin-top: 6px;
+      margin-bottom: 0;
+    }
+    
+    p {
+      margin: 0;
+    }
+  
+  .time {
+    color: grey;
+  }
+  
+  .time-onhover:hover {
+    background: $blue;
+    cursor: pointer;
+  }
+    p,
+    h6,
+    .time {
+      color: #fff !important;
+    }
+
+hr {
+  margin: 5px auto;
+  width: 60%;
+}
+
+.chat-bubble {
+  padding: 10px 14px;
+  background: #eee;
+  margin: 10px 30px;
+  border-radius: 9px;
+  position: relative;
+  animation: fadeIn 1s ease-in;
+  
+  .chat-bubble:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 0;
+    height: 0;
+    border: 20px solid transparent;
+    border-bottom: 0;
+    margin-top: -10px;
+  }
+  
+  left
+     left:after {
+      left: 0;
+      border-right-color: #eee;
+      border-left: 0;
+      margin-left: -20px;
+    }
+  
+  
+  right,
+    right:after {
+      right: 0;
+      border-left-color: $blue;
+      border-right: 0;
+      margin-right: -20px;
+    }
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+.offset-md-9 
+  .chat-bubble {
+    background: $blue;
+    color: #fff;
+  }
+
+
+.chat-box-tray {
+  background: #eee;
+  display: flex;
+  align-items: baseline;
+  padding: 10px 15px;
+  align-items: center;
+  margin-top: 19px;
+  bottom: 0;
+}
+  input {
+    margin: 0 10px;
+    padding: 6px 2px;
+  }
+  
+  i {
+    color: grey;
+    font-size: 30px;
+    vertical-align: middle;
+  }
+    i:last-of-type {
+      margin-left: 25px;
+    }
+ 
+</style>
+<body>
+	<body data-spy="scroll" data-target="#secondary-nav" data-offset="55">
+  
+<header id="secondary-nav" class="secondary-nav shadow-sm position-sticky" style="top:0;">
+<div class="container">
+<nav class="vam nav scroll dragger scroller">
+    <li class="nav-item "><a href="dash.html" class="nav-link"><i class="fa fa-user"></i> Dashbord</a></li>
+    <li class="nav-item active"><a href="massange.html" class="nav-link"> <i class="fa fa-envelope"></i> My Massage</a></li>
+    <li class="nav-item"><a href="index.html" class="nav-link"><i class='fa fa-user'></i>  Profile</a></li>
+    <li class="nav-item "><a href="tutor.html" class="nav-link"><i class='fa fa-heart'></i> Favorite tutor</a></li>
+    <li class="nav-item "><a href="webner.html" class="nav-link"><i class='fa fa-heart'></i> Favorite webinar</a></li>
+    <li class="nav-item"><a href="course.html" class="nav-link"><i class='fa fa-heart'></i> Favorite course</a></li>
+    <li class="nav-item"><a href="trans.html" class="nav-link"><i class="fa fa-credit-card"></i> My Transactions</a></li>
+    <li class="nav-item"><a href="lesson.html" class="nav-link"><i class="fa fa-book"></i> My Lessons</a></li>
+    <li class="nav-item"><a href="mcourse.html" class="nav-link"><i class="fa fa-book"></i> My Courses</a></li>
+    <li class="nav-item"><a href="refund.html" class="nav-link"><i class="fa fa-calendar-check-o"></i> Refund Request</a></li>
+</nav>
+</div>
+</header>
+
+<div class="container">
+  <div class="row no-gutters">
+    <div class="col-md-4 border-right">
+    <div class="settings-tray">
+      <img class="profile-image" src="https://www.clarity-enhanced.net/wp-content/uploads/2020/06/filip.jpg" alt="Profile img">
+      <span class="settings-tray--right">
+      <i class="material-icons">cached</i>
+      <i class="material-icons">message</i>
+      <i class="material-icons">menu</i>
+      </span>
+    </div>
+    <div class="search-box">
+      <div class="input-wrapper">
+      <i class="material-icons">search</i>
+      <input placeholder="Search here" type="text">
+      </div>
+    </div>
+    <div class="friend-drawer friend-drawer--onhover">
+      <img class="profile-image" src="https://www.clarity-enhanced.net/wp-content/uploads/2020/06/robocop.jpg" alt="">
+      <div class="text">
+      <h6>Robo Cop</h6>
+      <p class="text-muted">Hey, you're arrested!</p>
+      </div>
+      <span class="time text-muted small">13:21</span>
+    </div>
+    <hr>
+    <div class="friend-drawer friend-drawer--onhover">
+      <img class="profile-image" src="https://www.clarity-enhanced.net/wp-content/uploads/2020/06/optimus-prime.jpeg" alt="">
+      <div class="text">
+      <h6>Optimus</h6>
+      <p class="text-muted">Wanna grab a beer?</p>
+      </div>
+      <span class="time text-muted small">00:32</span>
+    </div>
+    <hr>
+    <div class="friend-drawer friend-drawer--onhover ">
+      <img class="profile-image" src="https://www.clarity-enhanced.net/wp-content/uploads/2020/06/real-terminator.png" alt="">
+      <div class="text">
+      <h6>Skynet</h6>
+      <p class="text-muted">Seen that canned piece of s?</p>
+      </div>
+      <span class="time text-muted small">13:21</span>
+    </div>
+    <hr>
+    <div class="friend-drawer friend-drawer--onhover">
+      <img class="profile-image" src="https://www.clarity-enhanced.net/wp-content/uploads/2020/06/termy.jpg" alt="">
+      <div class="text">
+      <h6>Termy</h6>
+      <p class="text-muted">Im studying spanish...</p>
+      </div>
+      <span class="time text-muted small">13:21</span>
+    </div>
+    <hr>
+    <div class="friend-drawer friend-drawer--onhover">
+      <img class="profile-image" src="https://www.clarity-enhanced.net/wp-content/uploads/2020/06/rick.jpg" alt="">
+      <div class="text">
+      <h6>Richard</h6>
+      <p class="text-muted">I'm not sure...</p>
+      </div>
+      <span class="time text-muted small">13:21</span>
+    </div>
+    <hr>
+    <div class="friend-drawer friend-drawer--onhover">
+      <img class="profile-image" src="https://www.clarity-enhanced.net/wp-content/uploads/2020/06/rachel.jpeg" alt="">
+      <div class="text">
+      <h6>XXXXX</h6>
+      <p class="text-muted">Hi, wanna see something?</p>
+      </div>
+      <span class="time text-muted small">13:21</span>
+    </div>
+    </div>
+    <div class="col-md-8">
+    <div class="settings-tray">
+      <div class="friend-drawer no-gutters friend-drawer--grey">
+      <img class="profile-image" src="https://www.clarity-enhanced.net/wp-content/uploads/2020/06/robocop.jpg" alt="">
+      <div class="text">
+        <h6>Robo Cop</h6>
+        <p class="text-muted">Layin' down the law since like before Christ...</p>
+      </div>
+      <span class="settings-tray--right">
+        <i class="material-icons">cached</i>
+        <i class="material-icons">message</i>
+        <i class="material-icons">menu</i>
+      </span>
+      </div>
+    </div>
+    <div class="chat-panel">
+      <div class="row no-gutters">
+      <div class="col-md-3">
+        <div class="chat-bubble chat-bubble--left">
+        Hello dude!
+        </div>
+      </div>
+      </div>
+      <div class="row no-gutters">
+      <div class="col-md-3 offset-md-9">
+        <div class="chat-bubble chat-bubble--right">
+        Hello dude!
+        </div>
+      </div>
+      </div>
+      <div class="row no-gutters">
+      <div class="col-md-3 offset-md-9">
+        <div class="chat-bubble chat-bubble--right">
+        Hello dude!
+        </div>
+      </div>
+      </div>
+      <div class="row no-gutters">
+      <div class="col-md-3">
+        <div class="chat-bubble chat-bubble--left">
+        Hello dude!
+        </div>
+      </div>
+      </div>
+      <div class="row no-gutters">
+      <div class="col-md-3">
+        <div class="chat-bubble chat-bubble--left">
+        Hello dude!
+        </div>
+      </div>
+      </div>
+      <div class="row no-gutters">
+      <div class="col-md-3">
+        <div class="chat-bubble chat-bubble--left">
+        Hello dude!
+        </div>
+      </div>
+      </div>
+      <div class="row no-gutters">
+      <div class="col-md-3 offset-md-9">
+        <div class="chat-bubble chat-bubble--right">
+        Hello dude!
+        </div>
+      </div>
+      </div>
+      <div class="row">
+      <div class="col-12">
+        <div class="chat-box-tray">
+        <i class="material-icons">sentiment_very_satisfied</i>
+        <input type="text" placeholder="Type your message here...">
+        <i class="material-icons">mic</i>
+        <i class="material-icons">send</i>
+        </div>
+      </div>
+      </div>
+    </div>
+    </div>
+  </div>
+  </div>
+
+</body>
+  <script type="text/javascript">
+  	(function (window, document, undefined) {
+  'use strict';
+  
+  // Select nav items that have submenus
+  var hasSubmenu = document.querySelectorAll('[data-id]');
+  var visible = 'visible';
+  var i = 0;
+  
+  // Show the submenu by toggling the relevant class names
+  function showSubmenu (event) {
+    // We lose reference of this when filtering the nav items
+    var self = this;
+    
+    // Select the relevant submenu, by the data-id attribute
+    var submenu = document.getElementById(self.dataset.id);
+    
+    // Probably best to prevent clicks through
+    event.preventDefault();
+    if(!$(submenu).hasClass(visible)){
+      $('.nav-link').removeClass(visible);
+      $('.submenu').removeClass(visible);
+    }
+
+    self.classList.toggle(visible);
+    submenu.classList.toggle(visible);
+  }
+  
+  // Remove the active class
+  function removeChildClass(el) {
+    // Check if it exists, then remove
+    if ( el.classList.contains(visible) ) {
+      el.classList.remove(visible);
+    }
+  }
+  
+  // On clicks show submenus
+  for ( i = 0; i < hasSubmenu.length; i++ ) {
+    hasSubmenu[i].addEventListener('click', showSubmenu);
+  }
+})(window, document);
+
+
+/*---------- DRAGGER ----------*/
+$(document).ready(function() {
+  $('.dragger').mousedown(function (event) {
+    $(this)
+      .data('down', true)
+      .data('x', event.clientX)
+      .data('scrollLeft', this.scrollLeft)
+      .addClass("dragging");
+
+    return false;
+  }).mouseup(function (event) {
+    $(this)
+      .data('down', false)
+      .removeClass("dragging");
+  }).mousemove(function (event) {
+    if ($(this).data('down') == true) {
+      this.scrollLeft = $(this).data('scrollLeft') + $(this).data('x') - event.clientX;
+    }
+  }).mousewheel(function (event, delta) {
+    this.scrollLeft -= (delta * 30);
+  }).css({
+    'overflow' : 'hidden',
+    'cursor' : '-moz-grab'
+  });
+  $(window).mouseout(function (event) {
+    if ($('.team-form-data').data('down')) {
+      try {
+        if (event.originalTarget.nodeName == 'BODY' || event.originalTarget.nodeName == 'HTML') {
+          $('.team-form-data').data('down', false);
+        }
+      } catch (e) {}
+    }
+  });
+});
+
+
+/*---------- SCROLLER ----------*/
+jQuery(function ($) {
+    $.fn.hScroll = function (amount) {
+        amount = amount || 120;
+        $(this).bind("DOMMouseScroll mousewheel", function (event) {
+            var oEvent = event.originalEvent, 
+                direction = oEvent.detail ? oEvent.detail * -amount : oEvent.wheelDelta, 
+                position = $(this).scrollLeft();
+            position += direction > 0 ? -amount : amount;
+            $(this).scrollLeft(position);
+            event.preventDefault();
+        })
+    };
+});
+
+$(document).ready(function() {
+    $('.scroller').hScroll(); // You can pass (optionally) scrolling amount
+});
+
+/*---- ANCHOR LINK ANIMATION WITH OFFSET ----*/
+$(".secondary-nav a[href^='#']").on('click', function(event) {
+  var target = this.hash;
+
+  event.preventDefault();
+
+  var navOffset = $('.secondary-nav').height();
+
+  return $('html, body').animate({
+    scrollTop: $(this.hash).offset().top - navOffset
+  }, 300, function() {
+    return window.history.pushState(null, null, target);
+  });
+});
+
+$(".secondary-nav li").click(function() {
+  centerLI(this, '.vam');
+  // Dropdown Toggle
+  if(!$(this).hasClass('dropdown')){
+    $('.nav-link').removeClass('visible');
+    $('.submenu').removeClass('visible');
+  }
+});
+
+//http://stackoverflow.com/a/33296765/350421
+ function centerLI(target, outer) {
+   var out = $(outer);
+   var tar = $(target);
+   var x = out.width() - 50;
+   var y = tar.outerWidth(true);
+   var z = tar.index();
+   var q = 0;
+   var m = out.find('li');
+   for (var i = 0; i < z; i++) {
+     q += $(m[i]).outerWidth(true);
+   }
+   //out.scrollLeft(Math.max(0, q - (x - y)/2));
+   out.animate({
+     scrollLeft: Math.max(0, q - (x - y) / 2)
+   }, 500);
+
+ }
+
+// Dropdown Close on Body click
+$(document).mouseup(function(e) 
+{
+    var container = $("#secondary-nav");
+
+    // if the target of the click isn't the container nor a descendant of the container
+    if (!container.is(e.target) && container.has(e.target).length === 0) 
+    {
+        $('.nav-link').removeClass('visible');
+        $('.submenu').removeClass('visible');
+    }
+});
+
+$(document).ready(function () {
+  
+  $(".nav-item").click(function (){
+    $(this).addClass("active").siblings().removeClass("active");
+  });
+});
+
+
+
+$( '.friend-drawer--onhover' ).on( 'click',  function() {
+  
+  $( '.chat-bubble' ).hide('slow').show('slow');
+  
+});
+
+// Video tutorial/codealong here: https://youtu.be/fCpw5i_2IYU
+  </script>
+</html>

@@ -1,10 +1,33 @@
- c<!DOCTYPE html>
+ <!DOCTYPE html>
 <html>
 <head><meta name="viewport" content="width=device-width,initial-scale=1.0">
   <title>global</title>
   <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 </head>
-<body>
+
+		<body data-spy="scroll" data-target="#secondary-nav" data-offset="55">
+  
+<header id="secondary-nav" class="secondary-nav shadow-sm position-sticky" style="top:0;">
+<div class="container">
+<nav class="vam nav scroll dragger scroller">
+    <li class="nav-item "><a href="dash.html" class="nav-link"><i class="fa fa-user"></i> Dashbord</a></li>
+    <li class="nav-item active"><a href="massage.html" class="nav-link"> <i class="fa fa-envelope "></i> My Massage</a></li>
+    <li class="nav-item "><a href="index.html" class="nav-link"><i class='fa fa-user'></i>  Profile</a></li>
+    <li class="nav-item "><a href="tutor.html" class="nav-link"><i class='fa fa-heart'></i> Favorite tutor</a></li>
+    <li class="nav-item "><a href="webner.html" class="nav-link"><i class='fa fa-heart'></i> Favorite webinar</a></li>
+    <li class="nav-item"><a href="course.html" class="nav-link"><i class='fa fa-heart'></i> Favorite course</a></li>
+    <li class="nav-item"><a href="trans.html" class="nav-link"><i class="fa fa-credit-card"></i> My Transactions</a></li>
+    <li class="nav-item"><a href="lesson.html" class="nav-link"><i class="fa fa-book"></i> My Lessons</a></li>
+    <li class="nav-item"><a href="mcourse.html" class="nav-link"><i class="fa fa-book"></i> My Courses</a></li>
+    <li class="nav-item"><a href="refund.html" class="nav-link"><i class="fa fa-calendar-check-o"></i> Refund Request</a></li>
+</nav>
+</div>
+</header>
+	<section class="bodsms">
   <div class="container">
     <div class="leftSide">
 
@@ -12,11 +35,6 @@
         <div class="userimg">
           <img src="img1.png" class="cover">
         </div>
-        <ul class="nav-icons">
-          <li></li>
-          <li></li>
-          <li></li>
-        </ul>
       </div>
 
         <div class="search-chat">
@@ -26,7 +44,7 @@
           </div>
         </div>
        <div class="chartlist">
-          <div class="block">
+          <div class="block active">
             <div class="imgbx">
               <img src="img1.png" class="cover">
             </div>
@@ -36,12 +54,12 @@
                 <p class="time">10:56</p>
                </div>
               <div class="massage-p">
-                <p>Good afternoon </p>
+                 <p>Good afternoon </p>
               </div>
             </div>
           </div>
 
-          <div class="block">
+          <div class="block unread">
             <div class="imgbx">
               <img src="img1.png" class="cover">
             </div>
@@ -52,6 +70,7 @@
                </div>
               <div class="massage-p">
                 <p>Good afternoon </p>
+                <b>1</b>
               </div>
             </div>
           </div>
@@ -69,7 +88,7 @@
               </div>
             </div>
           </div>
-          <div class="block">
+          <div class="block unread">
             <div class="imgbx">
               <img src="img1.png" class="cover">
             </div>
@@ -80,6 +99,7 @@
                </div>
               <div class="massage-p">
                 <p>Good afternoon </p>
+                <b>2</b>
               </div>
             </div>
           </div>
@@ -149,7 +169,20 @@
        <p>Morning <br><span>12:15</span></p>
      </div>
     </div>
-  </div> 
+   
+  <div class="chartBox-input">
+  	<ul class="nav-icons">
+    <li><ion-icon name="happy-outline"></ion-icon></li></ul>
+    <input type="text" name="" placeholder="Type a massage">
+    <ul class="nav-icons">
+    <li><ion-icon name="mic"></ion-icon></li></ul>
+  </div>
+ </div>
 </div>
+
+</section>
+
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 </html>

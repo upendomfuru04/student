@@ -587,40 +587,212 @@ footer {
 }
 
 
+.wpp{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+
+.wrapper{
+  background: #fff;
+  width: 550px;
+  border-radius: 16px;
+  box-shadow: 0 0 128px 0 rgba(0,0,0,0.1),
+             :  0 32px 64px 0 rgba(0,0,0,0.5);
+}
 
 
 
 
 
+.users{
+  padding: 25px 30px;
+}
+
+.users .content img{
+  height: 50px;
+  width: 50px;
+}
+
+.users .content,
+.users-list a .content{
+  display: flex;
+  align-items: center;
+}
+
+
+.wrapper img{
+  object-fit:cover;
+  border-radius: 50%; 
+}
+
+.users .details,
+.users-list a .content{
+  margin-left: 15px;
+  color: #000;
+}
 
 
 
 
+.users .details span,
+.users-list a .content{
+  font-size: 18px;
+  font-weight: 500;
+
+}
+
+
+.users .search{
+   margin: 20px 0;
+   display: flex;
+   position: relative;
+   align-items: center;
+   justify-content: space-between;
+}
+
+.users .search .text{
+  font-size: 18px;
+}
 
 
 
+.users .search input{
+  position: absolute;
+  height: 33px;
+  width:calc(100% - 32px) ;
+  border: 1px solid #ccc;
+  padding: 0 13px;
+  font-size: 16px;
+  border-radius: 5px;
+  outline: none;
+}
+
+.users .search button{
+  width: 31px;
+  height: 32px;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: #fe6600;
+  border-radius: 0 5px 5px 0;
+  font-size: 18px;
+}
+
+.users-list{
+  max-height: 380px;
+  overflow-y: auto;
+}
 
 
+.users-list a{
+ margin-bottom:15px;
+ page-break-after: 10px; 
+ border-bottom-color: #f1f1f1;
+ padding-right:15px;
+
+}
+
+.users-list a{
+  display: flex;
+  align-items: center;
+  padding-bottom: 20px;
+  justify-content: space-between;
+
+}
+
+.users-list a:last-child{
+  border: none;
+  margin-bottom: 0px;
+}
+
+.users-list a .content img{
+  height: 40px;
+  width: 40px;
+}
+.users-list a .content p{
+  color: #67676a;
+}
+
+.users-list a .status-dot{
+  font-size: 12px;
+  color: #468669;
+}
+
+.chart-area .hda{
+  display: flex;
+  align-items: center;
+  padding: 18px 30px;
+}
+
+.chart-area .hda img{
+  height: 45px;
+  width: 45px;
+  margin: 0 15px;
+}
 
 
+.chart-area .hda span{
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.chart-box{
+  height: 500px;
+  background: #f7f7f7;
+  padding: 10px 30px 20px 30px;
+   box-shadow: inset 0 32px 32px -32px rgba(0 0 / 5%),        
+             :  inset 0 -32px 32px -32px rgba(0 0 / 5%);
+}
+
+.chart-box .chart p{
+  font-size:12px;
+  padding: 8px 19px;
+  box-shadow: 0  0 32px rgba(0 0 / 8%),        
+             :0 16px 16px -16px rgba(0 0 / 10%);
+}
+
+.chart-box .chart-out{
+  display: flex;
+  align-items: center;
+}
+
+.chart-out .details {
+  margin-left: auto;
+  max-width: calc(100% - 130px);
+}
+
+.chart-out .details p{
+  font-size: 17px;
+  background: #333;
+  color: #fff;
+  border-radius: 18px 18px 0 18px;
+}
 
 
+.chart-box .chart-inc img{
+  height: 35px;
+  width: 35px;
+}
 
+.chart-box .chart-inc{
+  display: flex;
+  align-items: flex-end;
+}
 
+.chart-inc .details {
+  margin-left: 10px;
+  margin-right: auto;
+  max-width: calc(100%-130px); 
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+.chart-inc .details p{
+  background: #fff;
+  color: #333;
+  border-radius: 18px 18px 18px 0;
+}
 </style>
 <body> 
 
@@ -663,61 +835,216 @@ footer {
   
 </div>
 
+<br>
+<br>
+
+
+
+<section class="wpp">
+
  <div class="wrapper">
-    <section class="form signup">
-      <header>Realtime Chat App</header>
-      <form action="#" method="POST" enctype="multipart/form-data" autocomplete="off">
-        <div class="error-text"></div>
-        <div class="name-details">
-          <div class="field input">
-            <label>First Name</label>
-            <input type="text" name="fname" placeholder="First name" required>
+   <section class="users">
+     <div class="content">
+       <img src="img1.png">
+       <div class="details">
+         <span>Upendo Myfair</span>
+         <p>Active now</p>
+       </div>
+     </div>
+     <div class="search">
+       <span class="text"></span>
+       <input type="text" placeholder="Search or start new chart">
+       <button><i class="fa fa-search"></i></button>
+     </div>
+     <div class="users-list">
+       <a href="#">
+        <div class="content">
+          <img src="img1.png">
+       <div class="details">
+         <span>upendomyfair</span>
+         <p>This is test massage</p>
+       </div>
+     </div>
+     <div class="status-dot">
+       <i class="fa fa-circle"></i>
+     </div>
+   </a>
+
+    <a href="#">
+        <div class="content">
+          <img src="img1.png">
+       <div class="details">
+         <span>upendomyfair</span>
+         <p>This is test massage</p>
+       </div>
+     </div>
+     <div class="status-dot">
+       <i class="fa fa-circle"></i>
+     </div>
+   </a>
+
+    <a href="#">
+        <div class="content">
+          <img src="img1.png">
+       <div class="details">
+         <span>upendomyfair</span>
+         <p>This is test massage</p>
+       </div>
+     </div>
+     <div class="status-dot">
+       <i class="fa fa-circle"></i>
+     </div>
+   </a>
+
+    <a href="#">
+        <div class="content">
+          <img src="img1.png">
+       <div class="details">
+         <span>upendomyfair</span>
+         <p>This is test massage</p>
+       </div>
+     </div>
+     <div class="status-dot">
+       <i class="fa fa-circle"></i>
+     </div>
+   </a>
+
+    <a href="#">
+        <div class="content">
+          <img src="img1.png">
+       <div class="details">
+         <span>upendomyfair</span>
+         <p>This is test massage</p>
+       </div>
+     </div>
+     <div class="status-dot">
+       <i class="fa fa-circle"></i>
+     </div>
+   </a>
+
+    <a href="#">
+        <div class="content">
+          <img src="img1.png">
+       <div class="details">
+         <span>upendomyfair</span>
+         <p>This is test massage</p>
+       </div>
+     </div>
+     <div class="status-dot">
+       <i class="fa fa-circle"></i>
+     </div>
+   </a>
+
+    <a href="#">
+        <div class="content">
+          <img src="img1.png">
+       <div class="details">
+         <span>upendomyfair</span>
+         <p>This is test massage</p>
+       </div>
+     </div>
+     <div class="status-dot">
+       <i class="fa fa-circle"></i>
+     </div>
+   </a>
+
+    <a href="#">
+        <div class="content">
+          <img src="img1.png">
+       <div class="details">
+         <span>upendomyfair</span>
+         <p>This is test massage</p>
+       </div>
+     </div>
+     <div class="status-dot">
+       <i class="fa fa-circle"></i>
+     </div>
+   </a>
+    <a href="#">
+        <div class="content">
+          <img src="img1.png">
+       <div class="details">
+         <span>upendomyfair</span>
+         <p>This is test massage</p>
+       </div>
+     </div>
+     <div class="status-dot">
+       <i class="fa fa-circle"></i>
+     </div>
+   </a>
+ </div>
+   </section>
+ </div>
+
+
+
+
+
+
+ <div class="wrapper">
+   <section class="chart-area">
+    <div class="hda">
+       <img src="img1.png">
+       <div class="details">
+         <span>Upendo Myfair</span>
+         <p>Active now</p>
+       </div>
+     </div>
+      <div class="chart-box">
+        <div class="chart-out">
+          
+          <div class="details">
+            <p>upendo myfair soft naturaly beauty </p>
           </div>
-          <div class="field input">
-            <label>Last Name</label>
-            <input type="text" name="lname" placeholder="Last name" required>
+        </div>
+        <div class="chart-inc">
+          <img src="img1.png">
+          <div class="details">
+            <p>naturaly mild </p>
           </div>
         </div>
-        <div class="field input">
-          <label>Email Address</label>
-          <input type="text" name="email" placeholder="Enter your email" required>
+
+        <div class="chart-out">
+          
+          <div class="details">
+            <p>upendo myfair soft naturaly beauty </p>
+          </div>
         </div>
-        <div class="field input">
-          <label>Password</label>
-          <input type="password" name="password" placeholder="Enter new password" required>
-          <i class="fas fa-eye"></i>
+        <div class="chart-inc">
+          <img src="img1.png">
+          <div class="details">
+            <p>naturaly mild </p>
+          </div>
         </div>
-        <div class="field image">
-          <label>Select Image</label>
-          <input type="file" name="image" accept="image/x-png,image/gif,image/jpeg,image/jpg" required>
+        <div class="chart-out">
+          
+          <div class="details">
+            <p>upendo myfair soft naturaly beauty </p>
+          </div>
         </div>
-        <div class="field button">
-          <input type="submit" name="submit" value="Continue to Chat">
+        <div class="chart-inc">
+          <img src="img1.png">
+          <div class="details">
+            <p>naturaly mild </p>
+          </div>
         </div>
-      </form>
-      <div class="link">Already signed up? <a href="login.php">Login now</a></div>
-    </section>
-  </div>
+        <div class="chart-out">
+          
+          <div class="details">
+            <p>upendo myfair soft naturaly beauty </p>
+          </div>
+        </div>
+        <div class="chart-inc">
+          <img src="img1.png">
+          <div class="details">
+            <p>naturaly mild </p>
+          </div>
+        </div>
+      </div>
+   </section>
+ </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+</section>
 
 
 

@@ -651,6 +651,7 @@ footer {
    position: relative;
    align-items: center;
    justify-content: space-between;
+
 }
 
 .users .search .text{
@@ -668,6 +669,14 @@ footer {
   font-size: 16px;
   border-radius: 5px;
   outline: none;
+  opacity: 0;
+   pointer-events: none;
+   transition: all 0.3s ease;
+}
+
+.users .search input.active{
+  opacity: 1;
+   pointer-events: auto;
 }
 
 .users .search button{
@@ -741,6 +750,7 @@ footer {
 
 .chart-box{
   height: 500px;
+  overflow-y: auto;
   background: #f7f7f7;
   padding: 10px 30px 20px 30px;
    box-shadow: inset 0 32px 32px -32px rgba(0 0 / 5%),        
@@ -748,51 +758,80 @@ footer {
 }
 
 .chart-box .chart p{
-  font-size:12px;
+  word-wrap: break-word;
   padding: 8px 19px;
   box-shadow: 0  0 32px rgba(0 0 / 8%),        
              :0 16px 16px -16px rgba(0 0 / 10%);
 }
 
-.chart-box .chart-out{
+.chart-box .out{
   display: flex;
   align-items: center;
 }
 
-.chart-out .details {
+.out .details {
   margin-left: auto;
   max-width: calc(100% - 130px);
 }
 
-.chart-out .details p{
-  font-size: 17px;
+.out .details p{
+  font-size: 15px;
   background: #333;
   color: #fff;
   border-radius: 18px 18px 0 18px;
 }
 
 
-.chart-box .chart-inc img{
+.chart-box .inc img{
   height: 35px;
   width: 35px;
 }
 
-.chart-box .chart-inc{
+.chart-box .inc{
   display: flex;
   align-items: flex-end;
 }
 
-.chart-inc .details {
+.inc .details {
   margin-left: 10px;
   margin-right: auto;
   max-width: calc(100%-130px); 
 }
 
-.chart-inc .details p{
+.inc .details p{
+  font-size: 15px;
   background: #fff;
   color: #333;
   border-radius: 18px 18px 18px 0;
 }
+
+.chart-area .typing-area{
+  padding: 18px 38px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.typing-area input{
+  height: 45px;
+  width: calc(100% );
+  font-size: 17px;
+  border: 1px solid #ccc;
+  padding: 0 13px;
+  border-radius: 5px;
+  outline: none;
+}
+
+.typing-area button{
+  width: 55px;
+  border: none;
+  outline: none;
+  background: #333;
+  color: #fff;
+  font-size: 19px;
+  cursor: pointer;
+  border-radius: 0 5px 5px 0;
+}
+
 </style>
 <body> 
 
@@ -1004,56 +1043,60 @@ footer {
        </div>
      </div>
       <div class="chart-box">
-        <div class="chart-out">
+        <div class="chart out">
           
           <div class="details">
-            <p>upendo myfair soft naturaly beauty </p>
+            <p>upendo myfair soft naturaly beauty upendo myfair soft naturaly beauty</p>
           </div>
         </div>
-        <div class="chart-inc">
+        <div class="chart inc">
           <img src="img1.png">
           <div class="details">
-            <p>naturaly mild </p>
+            <p>naturaly mild upendo myfair soft naturaly beauty</p>
           </div>
         </div>
 
-        <div class="chart-out">
+        <div class="chart out">
           
           <div class="details">
-            <p>upendo myfair soft naturaly beauty </p>
+            <p>upendo myfair soft naturaly beauty upendo myfair soft naturaly beauty</p>
           </div>
         </div>
-        <div class="chart-inc">
+        <div class="chart inc">
           <img src="img1.png">
           <div class="details">
-            <p>naturaly mild </p>
+            <p>naturaly mild upendo myfair soft naturaly beauty</p>
           </div>
         </div>
-        <div class="chart-out">
+        <div class="chart out">
           
           <div class="details">
-            <p>upendo myfair soft naturaly beauty </p>
+            <p>upendo myfair soft naturaly beauty upendo myfair soft naturaly beautyupendo myfair soft naturaly beautyupendo myfair soft naturaly beauty</p>
           </div>
         </div>
-        <div class="chart-inc">
+        <div class="chart inc">
           <img src="img1.png">
           <div class="details">
-            <p>naturaly mild </p>
+            <p>naturaly mild upendo myfair soft naturaly beauty</p>
           </div>
         </div>
-        <div class="chart-out">
+        <div class="chart out">
           
           <div class="details">
-            <p>upendo myfair soft naturaly beauty </p>
+            <p>upendo myfair soft naturaly beauty upendo myfair soft naturaly beauty </p>
           </div>
         </div>
-        <div class="chart-inc">
+        <div class="chart inc">
           <img src="img1.png">
           <div class="details">
-            <p>naturaly mild </p>
+            <p>naturaly mild upendo myfair soft naturaly beauty</p>
           </div>
         </div>
       </div>
+      <form action="#" class="typing-area">
+        <input type="text" placeholder="type a message here...">
+        <button><i class="fa fa-telegram"></i> </button>
+      </form>
    </section>
  </div>
 
@@ -1139,7 +1182,17 @@ footer {
 
 
 
+<script type="text/javascript">
+  const searchBar = document.querySelector(".users .search input"),
+  searchBtn = document.querySelector(".users .search button");
 
+searchBtn.onclick = () =>{
+  searchBar.classList.toggle("active");
+  searchBar.focus();
+  searchBtn.classList.toggle("active");
+}
+
+</script>
 
 
 
